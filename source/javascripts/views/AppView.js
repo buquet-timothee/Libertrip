@@ -27,7 +27,7 @@ var AppView = Backbone.View.extend({
   },
 
   displayTrace: function() {
-    var items ='';
+    var items = '';
     console.log('----- TRACE ----- App contains: ', this.model.get('listsCollection').length, ' lists');
     this.model.get('listsCollection').each(function(listModel, index) {
         listModel.get('itemsCollection').each(function(itemModel, index) {
