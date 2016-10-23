@@ -1,0 +1,61 @@
+BUQUET Timothée
+LIBERTRIP - Backbone évaluation
+--------------------------------
+
+Temps de travail : 2j.
+
+REPARTITION DU TRAVAIL :
+
+	- samedi :
+		- am : 
+			- lecture de documentations : backbone.js, jQuery.js, underscore.js
+			- recherche : drag and drop
+			- réflexion sur l'architecture backbone
+		- pm : 
+			- croquis, schéma
+			- réalisation de l'interface graphique (SCSS, Bootstrap)
+			- développement des modèles + collections
+			- développement des vues avec gestion succinctes des évènements
+			- récupération des données importantes (listId, item, position etc.)
+	- dimanche :
+		- am :
+			- manipulation du contenu via interface graphique dynamisée (input text)
+		- pm : 
+			- développement des vues afin de modifier modèles
+			- recherche sur localStorage
+			- rédaction documentation
+			- commit
+			
+			
+FONCTIONNALITES DEVELOPPEES	:
+		
+- Création de listes :
+	- couleur paramétrable pour la couleur de la liste
+	- titre pas éditable car principe déjà développé pour les items
+- Création d'items :
+	- focus direct sur input de création d'items
+	- touche "entrée pour valider"
+- Drag and drop
+	- inter et intra liste
+	- utilisation de jquery ui sortable
+	- Pas besoin d'id de position avec les méthodes :
+		- ui.item.index() (jquery sortable)
+		- collection.add(data, {at : index}) (backbone.js)
+		-> récupération de l'item en fonction du label (doit donc être UNIQUE par liste)
+- Edition d'item :
+	- double clic sur l'item
+	- focus direct sur input
+	- validation d'un nouveau contenu grâce à la touche "entrée"
+- Suppression d'un item :
+	- Si edition validée avec un contenu vide
+- Trace : 
+	- trace permettant de visualiser l'évolution de la partie model dans la console
+	
+
+DETTE TECHNIQUE :
+
+- Edition du titre
+- Gestion des évènements avec listeners afin de mettre à jour la vue plus simplement
+- LocalStorage
+- Interface graphique différente de l'existante faute de l'avoir mémorisée
+
