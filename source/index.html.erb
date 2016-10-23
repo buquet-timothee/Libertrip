@@ -1,32 +1,46 @@
 ---
-title: Welcome to Middleman
+title: BACKBONE JS Evaluation
 ---
 
 <script src="javascripts/libs/jquery-3.1.1.min.js" type="text/javascript"></script>
+<script src="javascripts/libs/jquery-ui.min.js" type="text/javascript"></script>
+<script src="javascripts/libs/bootstrap.min.js" type="text/javascript"></script>
+<script src="javascripts/libs/jscolor.js" type="text/javascript"></script>
 <script src="javascripts/libs/underscore-min.js" type="text/javascript"></script>
 <script src="javascripts/libs/json2.js" type="text/javascript"></script>
 <script src="javascripts/libs/backbone-min.js" type="text/javascript"></script>
+<script src="javascripts/libs/backbone.localStorage-min.js" type="text/javascript"></script>
 
+<!-- TEMPLATES -->
+<script type="text/template" id="listTemplate">
+  <h5>LIST</h5>
+  <input type="text" id="createItem" class="form-control input-sm" placeholder="Create an item">
+  <ol class="sortable">
+  </ol>
+</script>
+
+<script type="text/template" id="appTemplate">
+  <div>
+    <a href="#" id="createList" class="btn btn-primary active" role="button" aria-pressed="true">CREATE LIST</a>
+    <a href="#" id="trace" class="btn btn-secondary active" role="button" aria-pressed="true">TRACE</a>
+</div>
+<br />
+</script>
+
+<!-- Namespace -->
+<script>
+  var app = {};
+</script>
 
 <!-- BACKBONE FILES -->
+<script src="javascripts/models/ItemModel.js" type="text/javascript"></script>
+<script src="javascripts/models/ListModel.js" type="text/javascript"></script>
+<script src="javascripts/models/AppModel.js" type="text/javascript"></script>
+<script src="javascripts/collections/ItemsCollection.js" type="text/javascript"></script>
+<script src="javascripts/collections/ListsCollection.js" type="text/javascript"></script>
+<script src="javascripts/views/ItemView.js" type="text/javascript"></script>
+<script src="javascripts/views/ListView.js" type="text/javascript"></script>
 <script src="javascripts/views/AppView.js" type="text/javascript"></script>
 <script src="javascripts/app.js" type="text/javascript"></script>
 
-<!-- -->
-
-<div class="welcome">
-  <div class="logo">
-    <%= image_tag "middleman-logo.svg" %>
-  </div>
-  <h1>Middleman is Running</h1>
-  <p class="doc">
-    <%= link_to "Read Documentation Online", "https://middlemanapp.com", target: "_blank" %>
-
-    <div id="container">
-    	
-    </div>
-
-
-
-  </p><!-- .doc -->
-</div><!-- .welcome -->
+<button class="jscolor { value:'66ccff', hash: true }"></button>

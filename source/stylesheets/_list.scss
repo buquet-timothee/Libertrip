@@ -1,0 +1,77 @@
+.containList {
+	padding: 0px 20px 20px 20px;
+	background-color: #8fff5e6;
+	float: left;
+	margin-right:30px;
+	margin-bottom: 0px;
+	max-height: 300px;
+	width: 250px;
+	overflow-y: auto;
+	-moz-box-shadow: 5px 5px 5px 0px #9b9b9b;
+	-webkit-box-shadow: 5px 5px 5px 0px #9b9b9b;
+	-o-box-shadow: 5px 5px 5px 0px #9b9b9b;
+	box-shadow: 5px 5px 5px 0px #9b9b9b;
+}
+
+#createItem{
+	width:180px;
+	margin-bottom: 10px;
+}
+
+span {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+ol {
+	counter-reset: li;
+	list-style: none;
+	*list-style: decimal;
+	font: 14px 'lucida sans';
+	min-height:20px;
+}
+
+
+ol a {
+	position: relative;
+	display: block;
+	padding: .4em .4em .4em .8em;
+	*padding: .4em;
+	margin: .5em 0 .5em -.4em;
+	background: #ddd;
+	color: #444;
+	text-decoration: none;
+}
+
+ol a:hover{
+	background: #eee;
+}	
+
+ol a:before{
+	content: counter(li);
+	counter-increment: li;
+	position: absolute;	
+	left: -2.5em;
+	top: 50%;
+	margin-top: -1em;
+	background: #fa8072;
+	height: 2em;
+	width: 2em;
+	line-height: 2em;
+	text-align: center;
+	font-weight: bold;
+}
+
+ol a:after{
+	position: absolute;	
+	content: '';
+	border: .5em solid transparent;
+	left: -1em;
+	top: 50%;
+	margin-top: -.5em;				
+}
+
+ol a:hover:after{
+	left: -.5em;
+	border-left-color: #fa8072;				
+}
